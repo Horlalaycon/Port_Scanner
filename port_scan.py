@@ -1,4 +1,5 @@
-# Program Developed by AJIMATI IBRAHIM A.K.A Horlalaycon @ github https://github.com/Horlalaycon
+#!/usr/bin/python
+
 
 import sys
 import socket
