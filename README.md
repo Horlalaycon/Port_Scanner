@@ -16,7 +16,7 @@
 
 ## Installation
 - ```git clone https://github.com/Horlalaycon/Port_Scanner.git```
-- ```cd net_probe```
+- ```cd Port_Scanner```
 - ```pip install -r requirements```
 - ```chmod +x port_scanner.py```
 - ```(python3 port_scanner.py -ip 1.2.3.4) / (python3 port_scanner.py -d hey.com)```
