@@ -151,7 +151,7 @@ if __name__ == "__main__":
 
 	except KeyboardInterrupt:
 		abort_countdown = [5, 4, 3, 2, 1]
-		for i in abort_countdown:
-			print(f"\r ({Fore.RED}Ctrl + c{Style.RESET_ALL}) Aborting in {i}", end="")
+		for count in abort_countdown:
+			print(f"\r ({Fore.RED}Ctrl + c{Style.RESET_ALL}) Aborting in {count}", end="")
 			time.sleep(0.5)
 		quit()
