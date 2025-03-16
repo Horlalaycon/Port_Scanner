@@ -19,7 +19,7 @@
 - ```cd Port_Scanner```
 - ```pip install -r requirements```
 - ```chmod +x portscanner```
-- ```./portscanner.py -ip 1.2.3.4 or ./portscanner -d hey.com)```
+- ```./portscanner -ip 1.2.3.4 or ./portscanner -d hey.com)```
 
 # Author
 - Program Developed by sys_br3ach3r @ GitHub https://github.com/Horlalaycon
