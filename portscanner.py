@@ -24,7 +24,7 @@ def convert_domain_name(domain):
 		quit()
 
 # CLI options
-parser = argparse.ArgumentParser(prog="port_scanner.py", description="A Program used to detect open ports on networks", epilog="Example: (port_scanner.py -ip 1.2.3.4) / (port_scanner.py -d hey.com)", formatter_class=argparse.RawTextHelpFormatter)
+parser = argparse.ArgumentParser(prog="portscanner.py", description="A Program used to detect open ports on networks", epilog="Example: (portscanner.py -ip 1.2.3.4) / (portscanner.py -d hey.com)", formatter_class=argparse.RawTextHelpFormatter)
 
 # One of the two options must be selected
 group = parser.add_mutually_exclusive_group(required=True)
