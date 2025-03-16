@@ -149,5 +149,8 @@ if __name__ == "__main__":
 		main()
 
 	except KeyboardInterrupt:
-		print(f"Aborting (Ctrl + C)")
+		abort_countdown = [5, 4, 3, 2, 1]
+		for i in abort_countdown:
+			print(f"\r ({Fore.RED}Ctrl + c{Style.RESET_ALL}) Aborting in {i}", end="")
+			time.sleep(0.5)
 		quit()
