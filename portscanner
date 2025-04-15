@@ -25,7 +25,7 @@ def convert_domain_name(domain):
 		quit()
 
 # CLI options
-parser = argparse.ArgumentParser(prog="port_scanner.py", description="A Program used to detect open ports on networks", epilog="Example: (port_scanner.py -ip 1.2.3.4) / (port_scanner.py -d hey.com)", formatter_class=argparse.RawTextHelpFormatter)
+parser = argparse.ArgumentParser(prog="portscanner.py", description="A Program used to detect open ports on networks", epilog="Example: (portscanner.py -ip 1.2.3.4) / (portscanner.py -d hey.com)", formatter_class=argparse.RawTextHelpFormatter)
 
 # One of the two options must be selected
 group = parser.add_mutually_exclusive_group(required=True)
@@ -132,8 +132,8 @@ def thread_scan():
 
 def main():
 	# banner
-	print(Back.WHITE + Fore.BLACK + Style.BRIGHT + "            Network Port Scanner            " + Style.RESET_ALL)
-	print(Back.WHITE + Fore.BLACK + Style.BRIGHT + "       By: Sys Br3ach3r                     " + Style.RESET_ALL)
+	print(Back.WHITE + Fore.BLACK + "            Network Port Scanner            " + Style.RESET_ALL)
+	print(Back.WHITE + Fore.BLACK + "       By: Sys Br3ach3r                     " + Style.RESET_ALL)
 
 	print(f'\n [+] Scanning [{Fore.LIGHTGREEN_EX + target + Style.BRIGHT + Style.RESET_ALL}] ports...')
 	print(Style.BRIGHT + Fore.CYAN + f"        Ports   State   Services" + Style.RESET_ALL)
@@ -142,7 +142,7 @@ def main():
 	thread_scan()
 	finish = time.perf_counter()
 
-	print(Back.WHITE + Fore.BLACK + Style.BRIGHT + f"   Finished in: {round(finish - start, 2)} seconds        " + Style.RESET_ALL)
+	print(Back.WHITE + Fore.BLACK +  f"   Finished in: {round(finish - start, 2)} seconds        " + Style.RESET_ALL)
 
 
 if __name__ == "__main__":
@@ -150,5 +150,8 @@ if __name__ == "__main__":
 		main()
 
 	except KeyboardInterrupt:
-		print(f"Aborting (Ctrl + C)")
+		abort_countdown = [5, 4, 3, 2, 1]
+		for count in abort_countdown:
+			print(f"\r ({Fore.RED}Ctrl + c{Style.RESET_ALL}) Aborting in {count}", end="")
+			time.sleep(0.5)
 		quit()

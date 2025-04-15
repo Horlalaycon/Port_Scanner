@@ -131,8 +131,8 @@ def thread_scan():
 
 def main():
 	# banner
-	print(Back.WHITE + Fore.BLACK + Style.BRIGHT + "            Network Port Scanner            " + Style.RESET_ALL)
-	print(Back.WHITE + Fore.BLACK + Style.BRIGHT + "       By: Sys Br3ach3r                     " + Style.RESET_ALL)
+	print(Back.WHITE + Fore.BLACK + "            Network Port Scanner            " + Style.RESET_ALL)
+	print(Back.WHITE + Fore.BLACK + "       By: Sys Br3ach3r                     " + Style.RESET_ALL)
 
 	print(f'\n [+] Scanning [{Fore.LIGHTGREEN_EX + target + Style.BRIGHT + Style.RESET_ALL}] ports...')
 	print(Style.BRIGHT + Fore.CYAN + f"        Ports   State   Services" + Style.RESET_ALL)
@@ -141,7 +141,7 @@ def main():
 	thread_scan()
 	finish = time.perf_counter()
 
-	print(Back.WHITE + Fore.BLACK + Style.BRIGHT + f"   Finished in: {round(finish - start, 2)} seconds        " + Style.RESET_ALL)
+	print(Back.WHITE + Fore.BLACK +  f"   Finished in: {round(finish - start, 2)} seconds        " + Style.RESET_ALL)
 
 
 if __name__ == "__main__":
@@ -153,4 +153,4 @@ if __name__ == "__main__":
 		for count in abort_countdown:
 			print(f"\r ({Fore.RED}Ctrl + c{Style.RESET_ALL}) Aborting in {count}", end="")
 			time.sleep(0.5)
-		quit()
+		quit()
